@@ -9,7 +9,7 @@
 
 ### Spring Boot
 
-@SpringBootApplicatoin을 사용하면 자동으로 A.C.를 생성하며, 내장 톰켓을 포함하므로 별도 설정이 필요 없다. (SpringApplication.run 실행시 내장톰켓 실행 및 A.C. 생성)
+@SpringBootApplication을 사용하면 자동으로 A.C.를 생성하며, 내장 톰켓을 포함하므로 별도 설정이 필요 없다. (SpringApplication.run 실행시 내장톰켓 실행 및 A.C. 생성)
 
 #### @SpringBootApplicatoin
 

@@ -93,13 +93,13 @@ public interface JobExecutionListener {
 - JobListeners 를 추가 가능
 - AfterJob 메소드는 작업의 성공 또는 실패에 관계없이 호출된다. JobExcution에서 성공, 실패 여부 얻을 수 있다.
 
-## Validatoin
+## Validation
 
-JobBuilder를 통해 validatoin configurtion을 지원한다.
+JobBuilder를 통해 validation configuration을 지원한다.
 
 ## 간단한 Job - Step - Tasklet 구조 만들기 (스프링배치 간단 튜토리얼)
 
-### 용어를 배워보자
+### 용어
 
 - Job: 배치 작업의 최상위 단위, 여러개의 Step으로 구성됨, 배치 작업의 실행 상태를 관리하기 위해 **
   `JobRepository`**에 메타데이터를 저장하며, 재시작 가능성(restartability)을 지원

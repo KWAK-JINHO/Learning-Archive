@@ -10,11 +10,10 @@
 
 ### 00_ComputerScience
 
-- [Data Structure](00_ComputerScience/Algorithm/data_structure.md)
+- [Data Structure](00_ComputerScience/DataStructure/data_structure.md)
 - [Greedy Algorithm](00_ComputerScience/Algorithm/greedy.md)
 - [Distributed Lock](00_ComputerScience/Concurrency/distributed_lock.md)
 - [Data Modeling](00_ComputerScience/Database/data_modeling.md)
-- [SQL Tuning](00_ComputerScience/Database/sql_tuning.md)
 - [Operating Systems Basics](00_ComputerScience/OS/operating_systems_01.md)
 - [Process and Thread](00_ComputerScience/OS/process_and_thread.md)
 - [JWT](00_ComputerScience/Security/jwt.md)
@@ -33,17 +32,10 @@
 - [IoC/DI (Inversion of Control/Dependency Injection)](02_Frameworks/Spring/IoC_DI.md)
 - [Spring Boot](02_Frameworks/Spring/springboot.md)
 
-### 03_Database
+### 03_Architecture
 
-- [Redis](03_Database/Caching/redis.md)
+- [Domain-Driven Design](03_Architecture/SystemDesign/domain_driven_design.md)
 
-### 04_Architecture
+### 04_Infrastructure
 
-- [Singleton Pattern](04_Architecture/DesignPattern/singleton_pattern.md)
-- [Factory Method Pattern](04_Architecture/DesignPattern/factory_method.md)
-- [Data-Centric Application Design](04_Architecture/SystemDesign/data_centric_application_design.md)
-- [Domain-Driven Design](04_Architecture/SystemDesign/domain_driven_design.md)
-
-### 05_Infrastructure
-
-### 06_Tools
+### 05_Tools

@@ -1,17 +1,3 @@
-# 인덱스 확장기능 사용법
-
-- 여러 인덱스 스캔 방식
-
-1. Index Range Scan - 가장 일반적 수직 + 수평
-2. Index Full Scan - 처음 ~ 끝까지 수평 탐색
-3. Index Unique Scan - only 수직탐색, UQ '=' 조건탐색
-4. Index Skip Scan - 선두컬럼 개수 적고 후행컬럼은 많을 때 ex)성별이 선두컬럼, 후행컬럼은 연봉
-5. Index Fast Scan - 순서(인덱스) 무시하고 쭉 읽는다.
-
-- Multiblock I/O 방식으로 대량의 인덱스 블록 읽을 때 효과 상승, 정렬 x
-
-6. Index Range Scan Descending - 1번을 내림차순
-
 # 3. 인덱스 튜닝
 
 # 테이블 액세스 최소화

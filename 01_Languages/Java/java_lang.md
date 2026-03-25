@@ -1,5 +1,42 @@
-왜 instanceof 대신 getClass()를 쓰는가?: 리스코프 치환 원칙(LSP)을 엄격하게 지키기 위해, 하위 클래스가 아닌 오직 현재 클래스와만 비교하고 싶을 때 equals() 메서드 재정의 시 자주 활용
+# Java Language (java.lang)
 
-실행 중에 클래스의 프라이빗 필드에 접근하거나 메서드를 강제로 호출할 수 있는데, 이는 강력하지만 성능 저하와 보안 취약점을 야기할 수 있으니 주의해야 한다. 이는 리플랙션에 사용된다
+`java.lang` 패키지는 자바 프로그램의 근간이 되는 클래스들을 포함하며, 별도의 `import` 없이 사용할 수 있는 유일한 패키지.
 
-최신 자바에서는 getClass()를 직접 호출하기보다 instanceof 패턴 매칭이나 switch 패턴 매칭을 통해 타입을 체크하고 형변환까지 한 번에 처리하는 것이 훨씬 모던하고 클린한 방식
+---
+
+## Object 클래스: 동등성과 해시
+
+### equals()와 hashCode()의 재정의
+
+equals(Object)가 true를 반환하는 두 객체는 반드시 동일한 hashCode 값을 가져야 한다.  
+hash기반 컬렉션들은 hashCode로 먼저 데이터가 들어갈 위치인 버킷을 찾고, 해당 버킷에서 equals로 최종 비교를 수행하기 때문.
+
+### 타입 체크 방식: getClass() vs instanceof
+
+- getClass()  
+  `this.getClass() == o.getClass()`를 사용해 런타임 시점에 정확히 같은 클래스인지 비교.
+
+- instanceof  
+  다형성을 사용하기 위해 사용. 상속 관계의 자식 클래스, JPA 프록시 객체까지 인정.
+
+- `instanceof` 패턴 매칭이나 `switch` 패턴 매칭을 자주 사용
+  ```java
+  if (o instanceof Subscribe sub) {
+      return Objects.equals(email, sub.email) && Objects.equals(category, sub.category);
+  }
+
+---
+
+## 문자열 결합 도구
+
+- Java 8에 도입
+- String.join(): 단순 결합용. 가독성이 좋음.
+- StringJoiner: 접두사/접미사가 필요하거나 동적 결합이 필요할 때 사용.
+
+### 주의사항
+
+- 성능상 `+` 연산보다 우수 (내부적으로 StringBuilder 활용)
+- 대량의 데이터 처리 시에는 Stream API의 joining()이 더 유연함.
+- Java 21 환경에서는 코드의 간결성을 위해 가급적 Stream 지향.
+
+---

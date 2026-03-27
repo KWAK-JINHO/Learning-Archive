@@ -2,10 +2,8 @@
 
 JPA에서는 엔티티의 기본 키(PK)를 자동으로 생성하기 위해 `@GeneratedValue`를 사용한다.
 
-```java
-
-@Id
-@GeneratedValue(strategy = GenerationType.XXX)
+```markdown
+@Id @GeneratedValue(strategy = GenerationType.XXX)
 private Long id;
 ```
 
@@ -25,13 +23,13 @@ private Long id;
 - insert 전에 ID 미리 조회
 - batch insert 가능 (성능 좋음)
 - allocationSize로 성능 최적화 가능
-    ```java
-    @SequenceGenerator(
-    name = "user_seq",
-    sequenceName = "user_seq",
-    allocationSize = 50
-    )
-    ```
+  ```markdown
+  @SequenceGenerator(
+  name = "user_seq",
+  sequenceName = "user_seq",
+  allocationSize = 50
+  )
+  ```
 - Oracle, PostgreSQL 등에서 사용
 
 ### 3. TABLE

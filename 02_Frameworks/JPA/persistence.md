@@ -1,5 +1,7 @@
 # JPA 내부동작에 대해서 알아보자
 
+JPA는 EntityManager를 통해 영속성 컨텍스트를 조작
+
 # EntityManager
 
 EntityManger는 JPA에서 엔티티를 관리하는 핵심 인터페이스이다.

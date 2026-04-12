@@ -9,7 +9,7 @@ private Long id;
 
 ## ID 생성 전략 종류
 
-### 1. IDENTITY
+### IDENTITY
 
 - DB의 auto-increment 사용
 - insert 시점에 PK 생성  
@@ -17,7 +17,7 @@ private Long id;
 - 배치 insert 비효율적
 - MySQL, PostgreSQL 등에서 사용
 
-### 2. SEQUENCE
+### SEQUENCE
 
 - DB의 sequence 객체 사용
 - insert 전에 ID 미리 조회
@@ -32,11 +32,11 @@ private Long id;
   ```
 - Oracle, PostgreSQL 등에서 사용
 
-### 3. TABLE
+### TABLE
 
 - 별도의 테이블을 만들어 ID 관리(`@TableGenerator`로 테이블 설정)
 - DB와 한번더 통신하기 때문에 거의 사용하지 않는다.
 
-### 4. AUTO
+### AUTO
 
 - JPA가 DB에 맞춰 자동 선택 (MySQL → IDENTITY, Oracle → SEQUENCE 등)

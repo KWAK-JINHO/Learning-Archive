@@ -24,5 +24,7 @@
 Spring의 @Controller, @Service등 서블릿과 동일한 구조이다.
 
 ## DispatcherServlet
-- 내부적으로 HttpServlet을 상속받은 하나의 서블릿
-- 모든 요청을 하나의 대표 서블릿이 받아 처리하는 Front Controller 패턴
+- Spring MVC에서 내부적으로 HttpServlet을 상속받은 서블릿이다.
+- 일반적으로 "/"로 매핑되어 대부분의 요청을 처리한다.
+- 모든 요청을 하나의 대표 서블릿이 받아 처리하는 Front Controller 패턴을 따른다.
+- 요청을 적절한 Controller로 분기하고, 실행 결과를 응답으로 반환하는 역할을 한다.
